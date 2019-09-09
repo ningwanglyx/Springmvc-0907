@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--设置顺序不可改变-->
+	<!--properties setting typeAliases typeHandlers environments mappers-->
+
+	<settings>
+		<!--设置使用log4j输出日志-->
+		<setting name="logImpl" value="LOG4J"/>
+
+		<!--自动将以下划线方式命名的数据库映射到java对象的驼峰式命名属性-->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+
+	<!-- 设置pojo类路径别名-->
+	<typeAliases>
+		<package name="com.day0907.pojo"/>
+	</typeAliases>
+
+	<!-- 和spring整合后 environments配置将废除 -->
+	<!--<environments default="development">
+		<environment id="development">
+			&lt;!&ndash; 使用jdbc事务管理 &ndash;&gt;
+			<transactionManager type="JDBC" />
+			&lt;!&ndash; 数据库连接池 &ndash;&gt;
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url"
+					value="jdbc:mysql://localhost:3306/day0804?characterEncoding=utf-8" />
+				<property name="username" value="root" />
+				<property name="password" value="1220" />
+			</dataSource>
+		</environment>
+	</environments>-->
+	
+	<!-- mapper的位置 -->
+	<mappers>
+		<!--通过xml文件位置来配置-->
+		<!--<mapper resource="mapper/UserMapper.xml"></mapper>
+		<mapper resource="mapper/OrdersMapper.xml"></mapper>-->
+
+		<!--通过配置接口位置的方法有问题-->
+		<!--class方式:这里需要注意:接口类和映射文件放在同一个目录下，并文件名要一致-->
+		<!--通过mapper接口位置来配置-->
+		<!--<mapper class="com.day0904.mapper.CountryMapper"></mapper>-->
+
+		<!--通过mapper包路径配置-->
+		<!--包扫描加载映射文件 : 接口类 和映射文件放在同一个目录下，并文件名要一致-->
+		<!--<package name=""/>-->
+
+	</mappers>
+
+</configuration>
