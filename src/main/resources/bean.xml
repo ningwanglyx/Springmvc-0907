@@ -37,12 +37,12 @@ http://www.springframework.org/schema/aop ">
         <!--自动扫描mapper.xml文件-->
         <!--<property name="mapperLocations" value="classpath:mapper/*.xml"></property>-->
         <!--指定核心配置文件位置-->
-        <property name="configLocation" value="mybatis_config.xml"></property>
+        <property name="configLocation" value="classpath:mybatis_config.xml"></property>
     </bean>
 
     <!-- 配置mapper扫描 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.day0904.mapper"></property>
+        <property name="basePackage" value="com.day0907.mapper"></property>
     </bean>
 
 

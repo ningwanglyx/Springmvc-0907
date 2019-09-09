@@ -38,6 +38,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- mapper的位置 -->
 	<mappers>
 		<!--通过xml文件位置来配置-->
+		<mapper resource="mapper/CountryMapper.xml"></mapper>
 		<!--<mapper resource="mapper/UserMapper.xml"></mapper>
 		<mapper resource="mapper/OrdersMapper.xml"></mapper>-->
 
