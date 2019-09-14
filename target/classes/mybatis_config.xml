@@ -12,6 +12,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 		<!--自动将以下划线方式命名的数据库映射到java对象的驼峰式命名属性-->
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
+
+
 	</settings>
 
 	<!-- 设置pojo类路径别名-->
@@ -39,6 +41,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<!--通过xml文件位置来配置-->
 		<mapper resource="mapper/CountryMapper.xml"></mapper>
+		<mapper resource="mapper/BookMapper.xml"></mapper>
 		<!--<mapper resource="mapper/UserMapper.xml"></mapper>
 		<mapper resource="mapper/OrdersMapper.xml"></mapper>-->
 
