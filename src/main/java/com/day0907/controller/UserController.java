@@ -1,13 +1,12 @@
 package com.day0907.controller;
 
 import com.day0907.pojo.Book;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 /**
  * @Author: YangxingLiu
@@ -16,6 +15,7 @@ import javax.servlet.http.HttpSession;
  * @Modified By:
  */
 @Controller
+@RequestMapping("user")
 public class UserController {
     //默认参数类型绑定request，response，session，model
     @RequestMapping("/test.action")
@@ -52,4 +52,12 @@ public class UserController {
 
         return "success";
     }
+
+    @RequestMapping("hello.action")
+    public String helloUser(){
+        return "role";
+    }
+
+
+
 }
